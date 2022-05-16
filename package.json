@@ -1,0 +1,22 @@
+{
+  "name": "horta_sustentavel",
+  "version": "1.0.0",
+  "description": "Um projeto com TypeScript e FlexBox para incentivar as pessoas a cultivarem hortas e melhorarem sua alimentação! :)",
+  "main": "./app/server.ts",
+  "author": "Pedro Henrique Godoy Costa",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev ./app/server.ts",
+    "db": "ts-node-dev ./app/db/db.ts"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.0.8",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/sqlite3": "^3.1.8",
+    "express": "^4.18.1",
+    "ts-node-dev": "^1.1.8"
+  }
+}

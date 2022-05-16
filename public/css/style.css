@@ -1,0 +1,350 @@
+@charset "UTF-8";
+
+:root {
+    --branco: #F0EAD2;
+    --verde-claro: #d4dbaf;
+    --verde: #ADC178;
+    --marrom: #A98467;
+    --marrom-escuro: #312a26;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: "DM";
+    src: url("../fonts/DMSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Asar';
+    src: url('../fonts/Asar-Regular.ttf');
+}
+
+@font-face {
+    font-family: "FireSans";
+    src: url("../fonts/FiraSans-Medium.otf");
+}
+
+body {
+    background-color: var(--branco);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    background-image: url("../images/pimentoes_transparentes.png");
+    min-height: 600px;
+    max-height: 700px;
+    background-color: var(--verde);
+}
+
+img {
+    user-select: none;
+}
+
+div.topHeader {
+    display: flex;
+    padding-top: 10px;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pimentoes {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+.contentHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'DM', serif;
+}
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Asar', Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+
+.mainContentHeader {
+    background-color: var(--marrom-escuro);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    color: var(--branco);
+    padding-top: 10px;
+    position: relative;
+    top: 100px;
+    width: 50%;
+    border-radius: 10px;
+    height: 500px;
+}
+
+.imgAlimento {
+    width: 50%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.divLogo {
+    min-width: 200px;
+    max-width: 400px;
+}
+
+nav {
+    margin-top: 10px;    
+}
+
+nav > a {
+    text-decoration: none;
+    color: black;
+    font-family: "FireSans", Helvetica, sans-serif;
+    padding: 15px;
+    font-size: 19px;
+}
+hr {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+nav > a:hover {
+    transition: color, 0.3s;
+    color: white;
+}
+
+.logo {
+    width: 100%;
+    padding-top: 5px;
+}
+
+main {
+    margin-top: 120px;
+    width: 100%;
+    color: var(--marrom-escuro);
+}
+
+section {
+    background-color: var(--verde-claro);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin-top: 40px;
+}
+
+.imgSection {
+    width: 45%;
+    height: 90%;
+    margin-right: 20px;
+    margin-left: 20px;
+    object-fit: scale-down;
+    border-radius: 6px;
+}
+
+.textSection {
+    margin-right: 20px;
+    margin-left: 20px;
+    max-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    align-content: center;
+}
+
+.sectionAlimentos {
+    width: 100%;
+    height: 450px;
+    background-color: var(--verde);
+    margin-top: 50px;
+    padding-top: 10px;
+}
+.sectionAlimentos > h1 {
+    padding-bottom: 15px;
+}
+.tabelasVerduras {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.verdura {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    background-color: var(--branco);
+    width: 25%;
+    cursor: pointer;
+    max-width: 230px;
+    height: 80%;
+    border: 2px solid var(--marrom-escuro);
+    border-radius: 5px;
+}
+
+.imgVerduras {
+    width: 80%;
+    height: 50%;
+    border: 2px solid var(--marrom);
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.textoVerdura {
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--marrom);
+    border: 1px solid var(--verde-claro);
+    width: 100%;
+    height: 300px;
+    margin-top: 40px;
+}
+.follow {
+    text-align: center;
+    width: 40%;
+    max-width: 300px;
+}
+.follow > h2 {
+    margin-bottom: 15px;
+}
+.pFollow {
+    font-family: "FireSans";
+    margin-bottom: 10px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.imgFollow {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+footer > .divLogo > a > .logo {
+    padding: 0;
+}
+
+@media only screen and (max-width: 720px) {
+    section {
+        flex-wrap: wrap;
+        min-height: 600px;
+        align-content: center;
+    }
+    .imgSection {
+        max-height: 200px;
+        margin-bottom: 2px;
+    }
+    .textSection {
+        max-height: 300px;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    body {
+        height: 100%;
+    }
+    .textoVerdura > p {
+        font-size: 14px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    .imgAlimento {
+        max-height: 50%;
+        width: 80%;
+    }
+    .mainContentHeader {
+        width: 80%;
+    }
+    .sectionAlimentos {
+        height: 1800px;
+    }
+    .tabelasVerduras {
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0;
+        row-gap: 70px;
+        align-content: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+    }
+    .verdura {
+        width: 50%;
+        height: 45%;
+        max-height: 450px;
+        flex-grow: 5;
+    }
+    header {
+        min-height: 800px;
+        max-height: 900px;
+        align-content: space-around;
+    }
+    .mainContentHeader {
+        top: -10px;
+    }
+    div.topHeader {
+        height: 120px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .divLogoMain {
+        top: -50px;
+        max-width: 300px;
+    }
+    footer {
+        flex-flow: column wrap;
+    }
+    .divLogo {
+        padding-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    section {
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+    }
+    .textSection {
+        max-height: 60%;
+    }
+    .imgSection {
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+}
